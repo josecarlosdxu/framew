@@ -28,8 +28,17 @@
     }
 }
 @include extendBlock(navbar, short) {
+    width: 100%;
+    justify-content: space-around;
+    @include addBreakpoint(xs) {
+        width: auto;
+    }
     @include element(item) {
-        padding: $spacer-md $spacer-lg;
+        padding: $spacer-md 0;
+        flex-grow: 1;
+        @include addBreakpoint(xs) {
+            padding: $spacer-md $spacer-lg;
+        }
         @include addBreakpoint(sm) {
             padding: $spacer-md 11px;
         }

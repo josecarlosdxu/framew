@@ -15,6 +15,7 @@
         @include addBreakpoint(md) {
             justify-content: space-between;
             padding: $layoutPadding;
+            margin-bottom:0.475rem;
         }
     }
 

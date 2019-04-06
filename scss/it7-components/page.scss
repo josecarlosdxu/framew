@@ -1,8 +1,6 @@
 $pageBackgroundColor: $color-white;
 @include block(page) {
     flex-grow: 1;
-    @include addBreakpoint(sm) {
-    }
     @include element(content) {
         @extend %content;
         background-color: $pageBackgroundColor;
@@ -11,6 +9,32 @@ $pageBackgroundColor: $color-white;
     }
     @include element(entries) {
         flex-shrink: 1;
-        padding: $layoutPadding;
+        padding: 0 $layoutPadding;
+    }
+    @include element(quote) {
+        padding-left: $layoutPadding;
+        display: flex;
+        &:before {
+            content: "";
+            min-height: 100%;
+            flex-basis: $spacer-2xs;
+            width: $spacer-2xs;
+            margin-right: $layoutPadding;
+            display: inline-block;
+            flex-shrink: 0;
+            background-color: $pageQuoteBarBgColor;
+        }
+    }
+    @include element(item) {
+        border-bottom: 1px solid;
+        padding: $layoutPadding 0;
+        &:last-child {
+            border: none;
+        }
+    }
+    @include element(itemTitle) {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: $spacer-sm;
     }
 }
