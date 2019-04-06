@@ -1,0 +1,12 @@
+// Components are user interface elements.
+// They contain cosmetic CSS and can be directly overwritten to suit the User Interface Kit style.
+// Carousels, calendars... and UI sets... Here we put our specific styles, for a specific list of a product, for example: buttons, modals ...etc,
+// https://www.iotacss.com/docs/components/
+//----------------------
+// components files here
+//----------------------
+@import "header";
+@import "page";
+@import "footer";
+@import "related";
+@import "navbar";

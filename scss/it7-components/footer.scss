@@ -1,0 +1,16 @@
+@include block(footer) {
+    background-color: $footerBgColor;
+    @include element(content) {
+        @extend %content;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: $layoutPadding;
+        @include addBreakpoint(sm) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

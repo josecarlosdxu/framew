@@ -1,0 +1,16 @@
+$pageBackgroundColor: $color-white;
+@include block(page) {
+    flex-grow: 1;
+    @include addBreakpoint(sm) {
+    }
+    @include element(content) {
+        @extend %content;
+        background-color: $pageBackgroundColor;
+        display: flex;
+        height: 100%;
+    }
+    @include element(entries) {
+        flex-shrink: 1;
+        padding: $layoutPadding;
+    }
+}

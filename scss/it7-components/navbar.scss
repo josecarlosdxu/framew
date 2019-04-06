@@ -1,0 +1,51 @@
+@include block(navbar) {
+    background-color: $navbarBgColor;
+    color: $navbarColor;
+    display: inline-flex;
+    justify-content: center;
+    @include element(item) {
+        color: currentColor;
+        display: inline-block;
+        font-size: 1rem;
+        padding: $spacer-md $spacer-xl;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.15s ease-in;
+        &:focus, &:hover, &:active {
+            @include bgHover($navbarBgColor);
+        }
+    }
+}
+@include extendBlock(navbar, social) {
+    background-color: #874000;
+    max-width: 100%;
+    overflow: hidden;
+    @include element(item) {
+        padding: $spacer-md 14px;
+        &:focus, &:hover, &:active {
+            @include bgHover($navbarSocialBgColor);
+        }
+    }
+}
+@include extendBlock(navbar, short) {
+    @include element(item) {
+        padding: $spacer-md $spacer-lg;
+        @include addBreakpoint(sm) {
+            padding: $spacer-md 11px;
+        }
+    }
+}
+@include extendBlock(navbar, top) {
+    width: 100%;
+    @include addBreakpoint(md) {
+        width: auto;
+    }
+    @include element(item) {
+        flex-grow: 1;
+        padding: $spacer-md $spacer-xs;
+        @include addBreakpoint(sm) {
+            flex-grow: 0;
+            padding: $spacer-md $spacer-xl;
+        }
+    }
+}

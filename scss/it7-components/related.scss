@@ -1,0 +1,12 @@
+@include block(related) {
+    display: none;
+
+@include addBreakpoint(md) {
+    background-color:#008000;
+    width: 300px;
+    height:100%;
+    flex-shrink: 0;
+    display: block;
+
+}
+}

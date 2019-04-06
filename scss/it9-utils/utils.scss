@@ -1,0 +1,16 @@
+// Utilities are high specifity classes, very explicit
+// These are used as replacements and help classes, are usually a line of code and usually have !important.
+// Examples:
+// Text-align, float, position, display etc.
+// https://www.iotacss.com/docs/utilities/
+
+%togglecheck,
+.togglecheck {
+    display: none;
+}
+
+%beforeAfter {
+    content: "";
+    display: block;
+    position: absolute;
+}

@@ -1,0 +1,19 @@
+@mixin utility($name) {
+    @at-root %u-#{$name} {
+        @content;
+    }
+
+    @at-root .u-#{$name} {
+        @content;
+    }
+}
+
+
+@mixin bgHover($color){
+    $color-hue: hue($color);
+    $color-sat: saturation($color);
+    $color-light: lightness($color);
+    $color-hover: hsl($color-hue, $color-sat + 14.7%, $color-light + 11%);
+    background-color:  $color-hover;
+
+}

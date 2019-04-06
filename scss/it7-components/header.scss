@@ -1,0 +1,43 @@
+@include block(header) {
+    background-color: $headerBgColor;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    @include element(content) {
+        @extend %content;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include addBreakpoint(md) {
+            justify-content: space-between;
+            padding: $layoutPadding;
+        }
+    }
+
+    @include element(title) {
+        color: currentColor;
+        display: inline-flex;
+        flex-shrink: 0;
+        text-decoration: none;
+        align-items: center;
+        padding: $layoutPadding $spacer-sm $layoutPadding $layoutPadding;
+
+        @include addBreakpoint(md) {
+            padding: 0;
+        }
+    }
+
+    @include element(text) {
+        font-size: 1.5rem;
+        padding: 0 0 0 $spacer-sm;
+        transition: all 0.1s ease-in;
+
+        @include addBreakpoint(xs) {
+            font-size: 2rem;
+        }
+    }
+}
